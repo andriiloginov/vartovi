@@ -1,18 +1,23 @@
 <!DOCTYPE html>
-<html lang="uk">
-  <head>
-    <meta charset="UTF-8">
-    <script src="https://unpkg.com/@rive-app/canvas@2.24.0"></script>
-  </head>
-  <body>
-    <canvas id="riveCanvas" width="500" height="500"></canvas>
-    <script>
-      const r = new rive.Rive({
-        src: "./vartovi.rev",
-        canvas: document.getElementById("riveCanvas"),
-        autoplay: true,
-        onLoad: () => r.resizeDrawingSurfaceToCanvas(),
-      });
-    </script>
-  </body>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="css/main.css">
+</head>
+<body>
+  <div class="container">
+    <canvas id="canvas" width="700" height="700"></canvas>
+  </div>
+  <script src="https://unpkg.com/@rive-app/canvas@2.24.0"></script>
+  <script>
+    const r = new rive.Rive({
+      src: "./vartovi.rev", // змінити на твій шлях або "rive.riv"
+      canvas: document.getElementById("canvas"),
+      autoplay: true,
+      onLoad: () => r.resizeDrawingSurfaceToCanvas(),
+    });
+  </script>
+</body>
 </html>
