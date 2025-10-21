@@ -2,14 +2,13 @@
 <html lang="uk">
   <head>
     <meta charset="UTF-8">
-    <!-- Rive Canvas CDN -->
     <script src="https://unpkg.com/@rive-app/canvas@2.24.0"></script>
   </head>
   <body>
     <canvas id="riveCanvas" width="500" height="500"></canvas>
     <script>
       const r = new rive.Rive({
-        src: "./vartovi.rev", // або "vartovee.rev"
+        src: "https://andriiloginov.github.io/vartovi/vartovi.rev",
         canvas: document.getElementById("riveCanvas"),
         autoplay: true,
         onLoad: () => r.resizeDrawingSurfaceToCanvas(),
